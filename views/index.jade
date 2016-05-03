@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/slider-pro.min.css')
+  script(src='/javascripts/myslider.js')
+  script(type='text/javascript').
+    var array = '#{slideFiles}';
+    setSlider(array);
+  style(type='text/css').
+      .my-caption{
+        display: table;
+        height: 100%;
+        width: 100%;
+        padding-bottom: 52px;
+        text-align: center;
+        color: #d0d0d0;
+        font: 12vw 'Source Sans Pro', sans-serif;
+        }
+      .my-span {
+        display: table-cell;
+        vertical-align: middle;
+        }
+  //if lte ie 7
+    style(type='text/css').
+      .my-span {
+        display: inline-block;
+      }
+      b {
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      }
+  #my-slider.slider-pro
+    #my-slides.sp-slides
+      
+  script(src='/javascripts/jquery.sliderPro.min.js')
